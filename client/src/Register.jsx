@@ -36,7 +36,7 @@ export default function Register() {
     if (!emailExists && !userExists) {
     }
     axios
-      .post("http://localhost:3000/api/contact/createUser", {
+      .post("https://contactapp-hjak.onrender.com/api/contact/createUser", {
         fullName: data.fullName,
         date: data.date,
         email: data.email,

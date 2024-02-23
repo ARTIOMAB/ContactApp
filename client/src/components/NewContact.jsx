@@ -13,7 +13,7 @@ export default function NewContact({ onUpdate }) {
     console.log(loginData);
 
     axios
-      .post("http://localhost:3000/api/Contact/create", {
+      .post("https://contactapp-hjak.onrender.com/api/Contact/create", {
         firstName: data.firstName,
         surName: data.surName,
         phone: data.phone,

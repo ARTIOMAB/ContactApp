@@ -20,7 +20,9 @@ function MainPage() {
 
   const onSubmit = ({ inputSearch }) => {
     axios
-      .get(`http://localhost:3000/api/contact/findContact/${inputSearch}`)
+      .get(
+        `https://contactapp-hjak.onrender.com/api/contact/findContact/${inputSearch}`
+      )
 
       .then((response) => {
         setUserContacts(response.data);
@@ -41,7 +43,9 @@ function MainPage() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/contact/findAllContact/${loginId}`)
+      .get(
+        `https://contactapp-hjak.onrender.com/api/contact/findAllContact/${loginId}`
+      )
       .then((response) => {
         setUserContacts(response.data);
         console.log(response.data);

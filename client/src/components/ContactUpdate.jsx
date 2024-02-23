@@ -12,12 +12,15 @@ function ContactUpdate({ id, setUpdatePage, updatePage }) {
 
   const onSubmit = (data) => {
     axios
-      .post(`http://localhost:3000/api/Contact/updateContactById/${id}`, {
-        firstName: data.firstName,
-        surName: data.surName,
-        phone: data.phone,
-        email: data.email,
-      })
+      .post(
+        `https://contactapp-hjak.onrender.com/api/Contact/updateContactById/${id}`,
+        {
+          firstName: data.firstName,
+          surName: data.surName,
+          phone: data.phone,
+          email: data.email,
+        }
+      )
       .then((response) => {
         console.log(response.data);
       })
@@ -30,7 +33,9 @@ function ContactUpdate({ id, setUpdatePage, updatePage }) {
   };
   const deleteContact = (data) => {
     axios
-      .delete(`http://localhost:3000/api/Contact/deleteContactById/${id}`)
+      .delete(
+        `https://contactapp-hjak.onrender.com/api/Contact/deleteContactById/${id}`
+      )
       .then((response) => {
         console.log(response.data);
       })

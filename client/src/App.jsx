@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/contact/findAllUsers")
+      .get("https://contactapp-hjak.onrender.com/api/contact/findAllUsers")
       .then((response) => {
         setUserData(response.data);
         console.log(response.data);
